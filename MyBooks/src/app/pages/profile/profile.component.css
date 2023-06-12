@@ -1,0 +1,170 @@
+.profile-page{
+    height: 77.9vh;
+    background-image: url(../../../assets/img/fondo_libreria.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+    .left, .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid var(--color-terciario);
+        border-radius: 10px;
+        width: 400px;
+        height: 450px;
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+        img{
+            border-radius: 500px;
+            height: 180px;
+            width: 180px;
+        }
+        .left__data{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 330px;
+        }
+            .data__field{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+                .title{
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                .info{
+                    border: 1px solid var grey;
+                    border-radius: 5px;
+                    width: 250px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    text-align: center;
+                }
+        form{
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 380px;
+        }
+            .form__header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+                .line{
+                    background-color: #1ABC9C;
+                    height: 3px;
+                    width: 300px;
+                }
+            .form__group, .form__editData{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            .form__group{
+                gap: 30px;
+            }
+                input{
+                    border: 1px solid grey;
+                    border-radius: 5px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    text-align: center;
+                    height: 36px;
+                    width: 220px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+                input::placeholder{
+                    color: grey;
+                    font-size: 13px;
+                    padding-left: 10px;
+                }
+                input[type=text]:focus{
+                    color: whitesmoke;
+                    border-color: grey;
+                    outline: 0 none;
+                }
+            .form__button{
+                box-shadow: 2px 2px 2px black;
+                background-color:wheat;
+                width: 120px;
+                height: 30px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .form__button:hover{
+                border: 2px solid #1ABC9C;
+                background-color: white;
+                color: grey;
+            }
+            .form__button:active{
+                font-weight: 600;
+                transform: translateY(4px);
+            }
+
+
+/*----------Media-Queries---------*/
+@media screen and (max-width: 1280px) {
+    .profile-page{
+        height: 82.6vh;
+    }
+}
+@media screen and (max-width: 912px) {
+    .profile-page{
+        height: 90vh;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 820px) {
+    .profile-page{
+        height: 100%;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 414px) {
+        .left, .right{
+            width: 350px;
+            height: 500px;
+        }
+        .left__data{
+            width: 250px;
+        }
+            .data__field{
+                flex-direction: column;
+            }
+        .line{
+            width: 220px;
+        }
+}
+@media screen and (max-width: 280px) {
+    .left, .right{
+        width: 250px;
+    }
+    img{
+        height: 140px;
+        width: 140px;
+    }
+    .left__title{
+        font-size: 18px;
+    }
+        .info{
+            width: 200px;
+        }
+}
